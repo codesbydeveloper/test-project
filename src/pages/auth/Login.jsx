@@ -3,7 +3,6 @@ import { useNavigate } from 'react-router-dom';
 import { LogIn, Lock, Mail, AlertCircle } from 'lucide-react';
 import { useLogin } from '../../hooks/useLogin';
 import { getCookie } from '../../utils/cookies';
-import GoogleAd from '../../components/GoogleAd';
 
 export default function Login() {
   const [email, setEmail] = useState('');
@@ -120,15 +119,6 @@ export default function Login() {
           </form>
 
           {/* Demo Credentials */}
-        </div>
-
-        {/* Google AdSense Test Ad */}
-        <div className="mt-6 bg-slate-800 border border-slate-700 rounded-lg p-4">
-          <GoogleAd 
-            adSlot="6300978111"
-            adFormat="auto"
-            style={{ minHeight: '100px' }}
-          />
         </div>
       </div>
     </div>

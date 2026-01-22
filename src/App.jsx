@@ -4,14 +4,15 @@ import DomainsPage from './pages/admin/domains';
 import UserDashboard from './pages/user/dashboard';
 import ProfilePage from './pages/profile/Profile';
 import Login from './pages/auth/Login';
+import Home from './pages/home/Home';
 import ProtectedRoute from './components/ProtectedRoute';
 
 export default function App() {
   return (
     <Routes>
       {/* Public Routes */}
+      <Route path="/" element={<Home />} />
       <Route path="/login" element={<Login />} />
-      <Route path="/" element={<Navigate to="/login" replace />} />
 
       {/* Protected Admin Routes */}
       <Route
