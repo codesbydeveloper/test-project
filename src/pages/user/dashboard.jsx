@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Globe, Plus, LogOut, User, Trash2, Edit, X, Check } from 'lucide-react';
 import { deleteCookie } from '../../utils/cookies';
 import { useDomain } from '../../hooks/useDomain';
+import GoogleAd from '../../components/GoogleAd';
 
 export default function UserDashboard() {
   const navigate = useNavigate();
@@ -322,6 +323,15 @@ export default function UserDashboard() {
               {domains.filter(d => d.status !== 'active').length}
             </p>
           </div>
+        </div>
+
+        {/* Google AdSense Test Ad */}
+        <div className="mt-8 bg-slate-800 border border-slate-700 rounded-lg p-4">
+          <GoogleAd 
+            adSlot="1234567890"
+            adFormat="auto"
+            style={{ minHeight: '100px' }}
+          />
         </div>
       </div>
     </div>
