@@ -4,7 +4,6 @@ import { Trash2, Edit, Plus, LogOut, User, Globe } from 'lucide-react';
 import UserAdd from './_components/UserAdd';
 import { deleteCookie } from '../../utils/cookies';
 import { useUser } from '../../hooks/useUser';
-import GoogleAd from '../../components/GoogleAd';
 
 export default function AdminUI() {
   const navigate = useNavigate();
@@ -234,15 +233,6 @@ export default function AdminUI() {
               {users.filter(i => i.role === 'user').length}
             </p>
           </div>
-        </div>
-
-        {/* Google AdSense Test Ad */}
-        <div className="mt-8 bg-slate-800 border border-slate-700 rounded-lg p-4">
-          <GoogleAd 
-            adSlot="6300978111"
-            adFormat="auto"
-            style={{ minHeight: '100px' }}
-          />
         </div>
       </div>
     </div>
