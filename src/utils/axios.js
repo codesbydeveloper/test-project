@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { getCookie } from './cookies';
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://test-api.raomtech.com/api';
 
 // Create axios instance
 const axiosInstance = axios.create({

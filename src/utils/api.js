@@ -1,6 +1,6 @@
 import { getCookie } from './cookies';
 
-const API_BASE_URL = 'http://localhost:3000/api';
+const API_BASE_URL = 'https://test-api.raomtech.com/api';
 
 /**
  * Make an API request
