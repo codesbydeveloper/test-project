@@ -3,17 +3,16 @@ import { useEffect, useRef } from 'react';
 /**
  * Google AdSense Ad Component
  * 
- * To use this component:
- * 1. Replace 'ca-pub-XXXXXXXXXXXXXXXX' with your actual AdSense Publisher ID
- * 2. Replace '1234567890' with your actual ad slot ID
- * 3. Get your Publisher ID from: https://www.google.com/adsense/
+ * Using Google's Test Ad Client ID for testing: ca-pub-3940256099942544
+ * Replace with your actual AdSense Publisher ID when ready for production
  * 
  * Example usage:
- * <GoogleAd adSlot="1234567890" adFormat="auto" />
+ * <GoogleAd adSlot="6300978111" adFormat="auto" />
  */
 export default function GoogleAd({ 
-  adSlot = '1234567890',
+  adSlot = '6300978111',
   adFormat = 'auto',
+  adClient = 'ca-pub-3940256099942544', // Google Test Ad Client ID
   className = '',
   style = {}
 }) {
@@ -21,9 +20,9 @@ export default function GoogleAd({
   const adInitialized = useRef(false);
 
   useEffect(() => {
-    // Initialize ad after component mounts
+    // Function to initialize the ad
     const initializeAd = () => {
-      if (adRef.current && !adInitialized.current) {
+      if (adRef.current && !adInitialized.current && window.adsbygoogle) {
         try {
           // Push ad configuration to Google AdSense
           (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -34,19 +33,33 @@ export default function GoogleAd({
       }
     };
 
-    // Wait for AdSense script to load
+    // Check if AdSense script is already loaded
     if (window.adsbygoogle) {
-      initializeAd();
-    } else {
-      // If script not loaded yet, wait a bit
+      // Script is loaded, initialize immediately
       const timer = setTimeout(() => {
+        initializeAd();
+      }, 100);
+      return () => clearTimeout(timer);
+    } else {
+      // Wait for script to load
+      const checkAdSense = setInterval(() => {
         if (window.adsbygoogle) {
+          clearInterval(checkAdSense);
           initializeAd();
         }
       }, 100);
-      return () => clearTimeout(timer);
+
+      // Cleanup after 5 seconds if script doesn't load
+      const timeout = setTimeout(() => {
+        clearInterval(checkAdSense);
+      }, 5000);
+
+      return () => {
+        clearInterval(checkAdSense);
+        clearTimeout(timeout);
+      };
     }
-  }, []);
+  }, [adSlot, adFormat]);
 
   return (
     <div className={`google-ad-wrapper ${className}`} style={style}>
@@ -60,7 +73,7 @@ export default function GoogleAd({
           width: '100%',
           ...style
         }}
-        data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+        data-ad-client={adClient}
         data-ad-slot={adSlot}
         data-ad-format={adFormat}
         data-full-width-responsive="true"

@@ -4,6 +4,7 @@ import { Globe, User, LogOut, Users, ArrowLeft, Check, X } from 'lucide-react';
 import { deleteCookie } from '../../utils/cookies';
 import { useDomain } from '../../hooks/useDomain';
 import { useUser } from '../../hooks/useUser';
+import GoogleAd from '../../components/GoogleAd';
 
 export default function DomainsPage() {
   const navigate = useNavigate();
@@ -217,6 +218,15 @@ export default function DomainsPage() {
               {domains.filter(d => d.user).length}
             </p>
           </div>
+        </div>
+
+        {/* Google AdSense Test Ad */}
+        <div className="mt-8 bg-slate-800 border border-slate-700 rounded-lg p-4">
+          <GoogleAd 
+            adSlot="6300978111"
+            adFormat="auto"
+            style={{ minHeight: '100px' }}
+          />
         </div>
       </div>
 

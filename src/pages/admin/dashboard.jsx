@@ -239,7 +239,7 @@ export default function AdminUI() {
         {/* Google AdSense Test Ad */}
         <div className="mt-8 bg-slate-800 border border-slate-700 rounded-lg p-4">
           <GoogleAd 
-            adSlot="1234567890"
+            adSlot="6300978111"
             adFormat="auto"
             style={{ minHeight: '100px' }}
           />
