@@ -12,12 +12,12 @@ export default function Home() {
         <article className="prose prose-invert max-w-none">
           <header className="mb-12 text-center">
             <h1 className="text-5xl font-bold text-white mb-4">
-              RaomTech – Cloud Management Platform
+              SaaS Admin Dashboard – Complete Management Solution
             </h1>
             <p className="text-xl text-slate-300 leading-relaxed">
-              RaomTech provides scalable cloud and domain management tools for businesses of all sizes. 
-              Our platform offers secure authentication, domain automation, and enterprise-grade reliability 
-              to help you manage your digital infrastructure efficiently.
+              Our SaaS Admin Dashboard provides comprehensive tools for managing users, domains, and business operations. 
+              Built with modern web technologies, our platform offers secure authentication, role-based access control, 
+              and intuitive interfaces that help teams manage their digital infrastructure efficiently.
             </p>
           </header>
 
@@ -34,18 +34,18 @@ export default function Home() {
 
           {/* Editorial Content Section */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Why Choose RaomTech?</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Why Choose Our SaaS Admin Dashboard?</h2>
             
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              In today's digital landscape, managing cloud infrastructure and domains requires robust, 
-              scalable solutions. RaomTech has been designed from the ground up to address the complex 
-              needs of modern businesses, from startups to enterprise organizations.
+              In today's digital landscape, managing business operations, users, and digital assets requires 
+              robust, scalable solutions. Our SaaS Admin Dashboard has been designed from the ground up to 
+              address the complex needs of modern businesses, from startups to enterprise organizations.
             </p>
 
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
               Our platform combines cutting-edge technology with intuitive design, making it easy for 
-              teams to manage their digital assets without compromising on security or performance. 
-              Whether you're handling a handful of domains or managing thousands, RaomTech scales with your needs.
+              teams to manage users, domains, and business operations without compromising on security or performance. 
+              Whether you're handling a small team or managing enterprise-level operations, our dashboard scales with your needs.
             </p>
 
             <div className="bg-slate-800/50 border border-slate-700 rounded-lg p-6 my-8">
@@ -53,23 +53,27 @@ export default function Home() {
               <ul className="space-y-3">
                 <li className="flex items-start gap-3 text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                  <span>Secure authentication system with role-based access control for enhanced security</span>
+                  <span>Secure authentication system with role-based access control (Admin and User roles)</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                  <span>Automated domain management tools that save time and reduce manual errors</span>
+                  <span>Complete user management with CRUD operations for creating, updating, and deleting users</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                  <span>Enterprise-grade infrastructure with 99.9% uptime guarantee</span>
+                  <span>Domain management system allowing users to create, update, and manage their domains</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                  <span>Comprehensive API access for seamless integration with your existing tools</span>
+                  <span>Admin dashboard for viewing all domains and assigning them to users</span>
                 </li>
                 <li className="flex items-start gap-3 text-slate-300">
                   <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
-                  <span>Real-time monitoring and analytics to track your infrastructure health</span>
+                  <span>User profile management with detailed account information and settings</span>
+                </li>
+                <li className="flex items-start gap-3 text-slate-300">
+                  <Check className="w-5 h-5 text-green-400 mt-1 flex-shrink-0" />
+                  <span>Modern, responsive design built with React and Tailwind CSS for optimal user experience</span>
                 </li>
               </ul>
             </div>
@@ -88,26 +92,29 @@ export default function Home() {
 
           {/* More Editorial Content */}
           <section className="mb-12">
-            <h2 className="text-3xl font-bold text-white mb-6">Getting Started with Cloud Management</h2>
+            <h2 className="text-3xl font-bold text-white mb-6">Getting Started with Admin Dashboard</h2>
             
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
-              Cloud management has become essential for businesses looking to optimize their operations 
-              and reduce costs. With RaomTech, you get a comprehensive platform that handles everything 
-              from domain registration to cloud resource allocation, all from a single, unified interface.
+              Admin dashboards have become essential for businesses looking to streamline their operations 
+              and manage their digital assets efficiently. With our SaaS Admin Dashboard, you get a comprehensive 
+              platform that handles everything from user management to domain administration, all from a single, 
+              unified interface.
             </p>
 
             <p className="text-slate-300 text-lg leading-relaxed mb-6">
               Our platform is built on industry best practices and follows strict security protocols. 
-              We understand that your digital infrastructure is critical to your business operations, 
-              which is why we've invested heavily in reliability, security, and performance.
+              We understand that your business operations are critical, which is why we've invested heavily 
+              in reliability, security, and user experience. The dashboard provides role-based access, ensuring 
+              that administrators and regular users have appropriate permissions and capabilities.
             </p>
 
             <div className="bg-blue-900/20 border border-blue-700/50 rounded-lg p-6 my-8">
-              <h3 className="text-xl font-bold text-white mb-3">Enterprise Solutions</h3>
+              <h3 className="text-xl font-bold text-white mb-3">Role-Based Access Control</h3>
               <p className="text-slate-300 leading-relaxed">
-                For larger organizations, we offer dedicated support, custom integrations, and priority 
-                access to new features. Our enterprise customers benefit from 24/7 support, dedicated 
-                account managers, and SLA guarantees that ensure your infrastructure remains operational.
+                Our platform features two distinct user roles: Administrators and Regular Users. Administrators 
+                have full access to manage users, view all domains, and assign domains to users. Regular users 
+                can create and manage their own domains, view their profile, and access their personalized dashboard. 
+                This separation ensures security while providing flexibility for different use cases.
               </p>
             </div>
           </section>
@@ -126,8 +133,8 @@ export default function Home() {
           {/* Call to Action */}
           <section className="text-center mt-16 mb-8">
             <p className="text-slate-300 text-lg mb-6">
-              Ready to streamline your cloud and domain management? Get started today and experience 
-              the difference that professional infrastructure management can make for your business.
+              Ready to streamline your business operations and user management? Get started today and experience 
+              the difference that a professional admin dashboard can make for your organization.
             </p>
             <button
               onClick={() => navigate('/login')}
